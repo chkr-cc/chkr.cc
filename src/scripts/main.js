@@ -1,9 +1,10 @@
 import Modal from 'bootstrap/js/dist/modal';
 import Tab from 'bootstrap/js/dist/tab';
+import ScrollSpy from 'bootstrap/js/dist/scrollspy';
 import feather from 'feather-icons';
 import './generator.js';
 
-window.bootstrap = { Modal };
+window.bootstrap = { Modal, ScrollSpy };
 
 // src/scripts/main.js
 
@@ -38,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function checkDomain() {
         const allowedDomain = 'chkr.cc';
         const currentDomain = window.location.hostname;
-        
+
         if (currentDomain !== allowedDomain && currentDomain !== 'localhost' && currentDomain !== '127.0.0.1') {
             window.location.href = `https://${allowedDomain}`;
         }
@@ -85,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
-            if(targetId && targetId !== '#') {
+            if (targetId && targetId !== '#') {
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     const offset = 50;
@@ -142,14 +143,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
     function openMobileMenu(e) {
-        if(e) e.preventDefault();
-        if(popupMobileMenu) popupMobileMenu.classList.add('menu-open');
+        if (e) e.preventDefault();
+        if (popupMobileMenu) popupMobileMenu.classList.add('menu-open');
         document.documentElement.style.overflow = 'hidden';
     }
 
     function closeMobileMenu(e) {
-        if(e) e.preventDefault();
-        if(popupMobileMenu) popupMobileMenu.classList.remove('menu-open');
+        if (e) e.preventDefault();
+        if (popupMobileMenu) popupMobileMenu.classList.remove('menu-open');
         document.documentElement.style.overflow = '';
     }
 
@@ -171,12 +172,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 8. Copyright Year & Clipboard
     const copyrightElement = document.getElementById('copyright');
-    if(copyrightElement) {
+    if (copyrightElement) {
         const currentYear = new Date().getFullYear();
         copyrightElement.textContent = `2022-${currentYear}`;
     }
 
-    document.addEventListener('copy', function(e) {
+    document.addEventListener('copy', function (e) {
         const selection = document.getSelection();
         if (selection) {
             const text = selection.toString();

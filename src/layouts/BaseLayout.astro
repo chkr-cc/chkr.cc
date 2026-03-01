@@ -40,13 +40,9 @@ const { title, description } = Astro.props;
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 
-    <!-- CSS (self-hosted + async to improve first paint) -->
-    <link rel="preload" href="/assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <link rel="preload" href="/assets/css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript>
-      <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
-      <link rel="stylesheet" href="/assets/css/style.min.css" />
-    </noscript>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
 
     <script type="application/ld+json">
       {
@@ -77,7 +73,5 @@ const { title, description } = Astro.props;
     data-bs-root-margin="0px 0px -40%"
   >
     <slot />
-
-
   </body>
 </html>
