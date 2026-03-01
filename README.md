@@ -1,29 +1,27 @@
-# Astro Starter Kit: Minimal
+# chkr.cc
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Welcome to the **chkr.cc** frontend repository! This project is a modern, blazing-fast web application built with [Astro](https://astro.build) and [Bootstrap 5](https://getbootstrap.com). It serves as a credit card checker and validator, featuring a clean UI, API docs, and dynamic modals.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Built With
+* **Framework:** [Astro](https://astro.build/) (Static Site Generation for extreme performance)
+* **Styling:** Vanilla CSS & Bootstrap 5
+* **Icons:** [Feather Icons](https://feathericons.com/)
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+## 📂 Project Structure
 
 ```text
 /
-├── public/
+├── public/                 # Static assets (fonts, images, raw CSS)
+│   └── assets/             
+│       ├── css/style.css   # Main stylesheet (including legacy overrides)
+│       └── fonts/          # Self-hosted Montserrat & Poppins
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/         # Reusable UI sections (Hero, Features, Modals)
+│   ├── layouts/            # Base HTML wrapper (BaseLayout.astro)
+│   ├── pages/              # Routing (index.astro)
+│   └── scripts/            # Vanilla JS logic (main.js, generator.js)
+└── astro.config.mjs        # Astro configuration
 ```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
 
 ## 🧞 Commands
 
@@ -35,9 +33,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
 | `npm run build`           | Build your production site to `./dist/`          |
 | `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## ⚡ Recent Upgrades
+The application was recently migrated from a legacy jQuery/HTML template to Astro. This migration completely stripped out jQuery in favor of Vanilla JS, self-hosted the Google Fonts, optimized the asset delivery pipeline, and restructured the layout into component-based architecture while fully preserving the original legacy design aesthetics.
