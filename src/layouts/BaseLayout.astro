@@ -1,5 +1,8 @@
 ---
 // src/layouts/BaseLayout.astro
+import "../assets/css/bootstrap.min.css";
+import "../assets/css/style.css";
+
 export interface Props {
   title: string;
   description: string;
@@ -40,9 +43,14 @@ const { title, description } = Astro.props;
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    <!-- Preload Fonts -->
+    <link
+      rel="preload"
+      href="/assets/fonts/feather.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
 
     <script type="application/ld+json">
       {
