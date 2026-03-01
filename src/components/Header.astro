@@ -1,0 +1,92 @@
+---
+// src/components/Header.astro
+---
+
+<header
+    class="rn-header haeder-default black-logo-version header--fixed header--sticky"
+    id="headerRef"
+>
+    <div
+        class="header-wrapper rn-popup-mobile-menu m--0 row align-items-center"
+    >
+        <!-- Start Header Left -->
+        <div class="col-lg-2 col-6">
+            <div class="header-left">
+                <div class="logo">
+                    <a href="/">
+                        <img
+                            src="/assets/images/logo/logo-chkr.png"
+                            width="201"
+                            height="70"
+                            alt="chkr.cc Credit Card Checker Logo"
+                        />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- End Header Left -->
+
+        <!-- Start Header Center -->
+        <div class="col-lg-10 col-6">
+            <div class="header-center">
+                <nav
+                    id="sideNav"
+                    class="mainmenu-nav navbar-example2 d-none d-xl-block"
+                >
+                    <!-- Start Mainmanu Nav -->
+                    <ul class="primary-menu nav nav-pills">
+                        <li class="nav-item">
+                            <a
+                                class="nav-link smoth-animation active"
+                                href="#home">Home</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link smoth-animation" href="#features"
+                                >Features</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link smoth-animation" href="#api"
+                                >API</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link smoth-animation" href="#ai">AI</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link smoth-animation" href="#support"
+                                >Support</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link smoth-animation"
+                                href="#changelog">Changelog</a
+                            >
+                        </li>
+                    </ul>
+                    <!-- End Mainmanu Nav -->
+                </nav>
+
+                <!-- Start Header Right  -->
+                <div class="header-right">
+                    <div class="hamberger-menu d-block d-xl-none">
+                        <i
+                            id="menuBtn"
+                            class="feather-menu humberger-menu"
+                            data-feather="menu"></i>
+                    </div>
+                    <div class="close-menu d-block">
+                        <span class="closeTrigger" id="closeHeaderBtn">
+                            <i data-feather="x"></i>
+                        </span>
+                    </div>
+                </div>
+                <!-- End Header Right  -->
+            </div>
+        </div>
+        <!-- End Header Center -->
+    </div>
+</header>

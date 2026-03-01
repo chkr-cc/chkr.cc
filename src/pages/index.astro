@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import MobileMenu from "../components/MobileMenu.astro";
+import HeroChecker from "../components/HeroChecker.astro";
+import Features from "../components/Features.astro";
+import ApiDocs from "../components/ApiDocs.astro";
+import AiSection from "../components/AiSection.astro";
+import Support from "../components/Support.astro";
+import Changelog from "../components/Changelog.astro";
+import Footer from "../components/Footer.astro";
+import Modals from "../components/Modals/index.astro";
+---
+
+<BaseLayout
+	title="Best Free Credit Card Checker Validator Ever | chkr.cc"
+	description="Free online credit card bulk checker and validator. Fast, secure, and reliable tool for validating credit card numbers with advanced features and API support."
+>
+	<Header />
+	<MobileMenu />
+
+	<main class="main-page-wrapper">
+		<!-- Add invisible H1 for SEO -->
+		<h1
+			style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;"
+		>
+			Free Credit Card Checker and Validator | chkr.cc
+		</h1>
+
+		<HeroChecker />
+		<Features />
+		<ApiDocs />
+		<AiSection />
+		<Support />
+		<Changelog />
+		<Modals />
+	</main>
+
+	<Footer />
+
+	<!-- Application Logic (Vanilla JS, bundled) -->
+	<script src="../scripts/main.js"></script>
+</BaseLayout>

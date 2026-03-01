@@ -1,0 +1,101 @@
+---
+// src/components/Modals/BinGeneratorModal.astro
+---
+
+<!-- Modal bin generator Start -->
+<div
+    class="modal fade"
+    id="bin-generator"
+    tabindex="-1"
+    role="dialog"
+    aria-hidden="true"
+>
+    <div class="modal-dialog modal-dialog-centered modal-news" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button
+                    type="button"
+                    class="close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                >
+                    <span aria-hidden="true"><i data-feather="x"></i></span>
+                </button>
+            </div>
+
+            <!-- End of .modal-header -->
+
+            <div class="modal-body">
+                <!-- Comment Section Area Start -->
+                <div class="comment-inner">
+                    <h3 class="title mb--40 mt--50">
+                        <i data-feather="credit-card"></i> Card Generator
+                    </h3>
+                    <form action="#">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-12">
+                                <div class="rnform-group">
+                                    <label for="bin">BIN</label><input
+                                        type="text"
+                                        id="bin"
+                                        placeholder="556338"
+                                        autocomplete="off"
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-6">
+                                <div class="rnform-group">
+                                    <label for="month">Month</label>
+                                    <select id="month">
+                                        <option value="">Random</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-6">
+                                <div class="rnform-group">
+                                    <label for="year">Year</label>
+                                    <select id="year">
+                                        <option value="">Random</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-6">
+                                <div class="rnform-group">
+                                    <label for="cvv">CVV</label>
+                                    <input
+                                        type="number"
+                                        id="cvv"
+                                        placeholder="Leave blank to random"
+                                    />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-6">
+                                <div class="rnform-group">
+                                    <label for="quantity">Quantity</label>
+                                    <input
+                                        type="number"
+                                        id="quantity"
+                                        value="10"
+                                    />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <a
+                                    class="rn-btn"
+                                    id="gen"
+                                    data-umami-event="generate-bin"
+                                    ><span>GENERATE</span></a
+                                >
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Comment Section End -->
+            </div>
+            <!-- End of .modal-body -->
+        </div>
+    </div>
+</div>

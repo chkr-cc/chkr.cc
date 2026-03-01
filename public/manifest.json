@@ -1,0 +1,21 @@
+{
+  "name": "chkr.cc Credit Card Checker",
+  "short_name": "chkr.cc",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e2024",
+  "theme_color": "#212428",
+  "description": "Free online credit card bulk checker and validator.",
+  "icons": [
+    {
+      "src": "/assets/images/logo/logo-circle.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/logo/logo-circle.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

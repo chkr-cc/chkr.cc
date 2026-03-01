@@ -1,0 +1,82 @@
+---
+// src/components/Modals/ProgressModal.astro
+---
+
+<!-- Modal check start -->
+<div
+    class="modal fade"
+    id="progress-modal"
+    tabindex="-1"
+    role="dialog"
+    aria-hidden="true"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+>
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <!-- Advertisement section -->
+                <div class="guangg mb-4">
+                    <!-- Replace this div with your ad code -->
+                    <div
+                        id="sample-ad"
+                        style="width: 300px; height: 250px; margin: 0 auto; background: transparent; display: flex; align-items: center; justify-content: center;"
+                    >
+                        <span class="text-muted small"
+                            >Ad Placement Placeholder</span
+                        >
+                        <div data-banner-id="1430000"></div>
+                    </div>
+                    <div data-nat="1429868"></div>
+                </div>
+
+                <!-- Progress bar below the ad -->
+                <div class="progress-charts">
+                    <h6 class="heading heading-h6">
+                        CHECKING<span class="animated-ellipsis"></span>
+                        [<span class="d-none d-sm-inline">Live: </span><span
+                            class="d-inline d-sm-none"
+                            >✓
+                        </span><span id="live-count" style="color: #20b27c;"
+                            >0</span
+                        > |
+                        <span class="d-none d-sm-inline">Die: </span><span
+                            class="d-inline d-sm-none"
+                            >✗
+                        </span><span id="die-count" style="color: #ff014f;"
+                            >0</span
+                        > |
+                        <span class="d-none d-sm-inline">Unknown: </span><span
+                            class="d-inline d-sm-none"
+                            >?
+                        </span><span id="unknown-count" style="color: #fce00c;"
+                            >0</span
+                        >]
+                    </h6>
+                    <div class="progress">
+                        <div
+                            class="progress-bar wow fadeInLeft"
+                            data-wow-duration="1.5s"
+                            data-wow-delay="1.3s"
+                            id="modalProgressBar"
+                            role="progressbar"
+                            style="width: 0%"
+                            aria-valuenow="0"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                        >
+                            <span class="percent-label" id="modalPercentLabel"
+                                >0%</span
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <button class="rn-btn mt-4" id="modal-stop">
+                    <span class="text-danger"><i data-feather="pause"></i></span
+                    >
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

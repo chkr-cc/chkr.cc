@@ -1,0 +1,168 @@
+---
+// src/components/HeroChecker.astro
+---
+
+<div id="home" class="rn-contact-area">
+    <div class="slide slider-style-1">
+        <div class="container">
+            <div class="row row--30 align-items-center contact-form-wrapper">
+                <div
+                    class="order-2 order-lg-1 col-lg-12 mt_md--50 mt_sm--50 mt_lg--30"
+                >
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <textarea
+                                        class="mono-text"
+                                        id="cc"
+                                        name="cc"
+                                        title="Credit Card Information"
+                                        placeholder="4552250055368xx3|08|2026|113"
+                                        required="required"
+                                        cols="20"
+                                        rows="15"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <button id="start" class="rn-btn">
+                                    <span><i data-feather="play"></i></span>
+                                </button>
+                                <button
+                                    id="stop"
+                                    class="rn-btn"
+                                    disabled
+                                    style="display: none;"
+                                >
+                                    <span class="text-danger"
+                                        ><i data-feather="pause"></i></span
+                                    >
+                                </button>
+                            </div>
+                            <div class="col-lg-6">
+                                <button
+                                    class="rn-btn"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#bin-generator"
+                                >
+                                    <span class="text-primary"
+                                        ><i data-feather="settings"></i></span
+                                    >
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12 mt--50 chkr" style="padding-right: 0;">
+                <!-- Pricing Area -->
+                <div class="navigation-wrapper">
+                    <!-- Bootstrap 5 Tabs structure, maintaining original CSS classes. -->
+                    <ul class="nav" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a
+                                class="nav-style nav-live active"
+                                id="live-tab"
+                                data-bs-toggle="tab"
+                                href="#live-pane"
+                                role="tab"
+                                aria-controls="live-pane"
+                                aria-selected="true"
+                            >
+                                Live<span
+                                    class="badge bg-dark text-subtitle ms-3"
+                                    >0</span
+                                >
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-style nav-die"
+                                id="die-tab"
+                                data-bs-toggle="tab"
+                                href="#die-pane"
+                                role="tab"
+                                aria-controls="die-pane"
+                                aria-selected="false"
+                            >
+                                Die<span
+                                    class="badge bg-dark text-subtitle ms-3"
+                                    >0</span
+                                >
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-style nav-unknown"
+                                id="unknown-tab"
+                                data-bs-toggle="tab"
+                                href="#unknown-pane"
+                                role="tab"
+                                aria-controls="unknown-pane"
+                                aria-selected="false"
+                            >
+                                Unknown<span
+                                    class="badge bg-dark text-subtitle ms-3"
+                                    >0</span
+                                >
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="myTabContent">
+                        <div
+                            class="tab-pane fade show active"
+                            id="live-pane"
+                            role="tabpanel"
+                            aria-labelledby="live-tab"
+                            tabindex="0"
+                        >
+                            <div class="rn-pricing">
+                                <div
+                                    class="pricing-body mt-5 mono-text"
+                                    id="liveResults"
+                                >
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="tab-pane fade"
+                            id="die-pane"
+                            role="tabpanel"
+                            aria-labelledby="die-tab"
+                            tabindex="0"
+                        >
+                            <div class="rn-pricing">
+                                <div
+                                    class="pricing-body mt-5 mono-text"
+                                    id="dieResults"
+                                >
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="tab-pane fade"
+                            id="unknown-pane"
+                            role="tabpanel"
+                            aria-labelledby="unknown-tab"
+                            tabindex="0"
+                        >
+                            <div class="rn-pricing">
+                                <div
+                                    class="pricing-body mt-5 mono-text"
+                                    id="unknownResults"
+                                >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End -->
+            </div>
+        </div>
+    </div>
+</div>

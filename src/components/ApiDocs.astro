@@ -1,0 +1,259 @@
+---
+// src/components/ApiDocs.astro
+import { Code } from "astro:components";
+
+const requestBody = `{
+  "data": "4242424242424242|12|2025|123"
+}`;
+
+const responseBody = `{
+  "code": 1,
+  "status": "Live",
+  "message": "Approved",
+  "card": {
+    "card": "4242424242424242|12|2030|123",
+    "bank": "JPMORGAN CHASE BANK",
+    "type": "visa",
+    "category": "credit",
+    "country": {
+      "name": "United States",
+      "emoji": "🇺🇸"
+    }
+  }
+}`;
+---
+
+<!-- Start API Documentation Area -->
+<div class="rn-service-area rn-section-gap section-separator" id="api">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div
+                    class="section-title text-left"
+                    data-aos="fade-up"
+                    data-aos-duration="500"
+                    data-aos-delay="100"
+                    data-aos-once="true"
+                >
+                    <span class="subtitle">Developers</span>
+                    <h2 class="title">API Documentation</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt--40">
+            <div class="col-lg-5 text-left">
+                <div class="personal-experience-inner mb--30 pt-4">
+                    <h3 class="title text-white mb-4" style="font-size: 28px;">
+                        Integrate Anywhere
+                    </h3>
+                    <p class="description max-width-100 mb-4">
+                        Build our powerful BIN checking and card validation
+                        engine directly into your applications. We provide a
+                        blazing fast, robust RESTful JSON API.
+                    </p>
+                    <p class="description max-width-100 mb-5">
+                        For high-volume production use, please see our <a
+                            href="https://rapidapi.com/kindbiz/api/bin-checker19/playground"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-primary fw-bold"
+                            style="text-decoration: underline;"
+                            >RapidAPI Commercial Plan</a
+                        >.
+                    </p>
+
+                    <!-- Status Codes -->
+                    <div
+                        class="mt-5 pt-4"
+                        style="border-top: 1px solid rgba(255, 255, 255, 0.1);"
+                    >
+                        <h5 class="title mb-4" style="font-size: 20px;">
+                            <i
+                                data-feather="terminal"
+                                class="me-2 text-primary"
+                                style="width: 20px;"></i> Response Codes
+                        </h5>
+
+                        <div class="d-flex flex-column gap-3">
+                            <div
+                                class="d-flex align-items-center bg-dark p-3 rounded"
+                                style="border: 1px solid rgba(255, 255, 255, 0.05); box-shadow: 0 4px 6px rgba(0,0,0,0.1);"
+                            >
+                                <span
+                                    class="badge bg-success me-3 p-2 font-monospace"
+                                    style="font-size: 14px;">Code 1</span
+                                >
+                                <span
+                                    class="text-light"
+                                    style="font-size: 16px;"
+                                    >Live (Success)</span
+                                >
+                            </div>
+                            <div
+                                class="d-flex align-items-center bg-dark p-3 rounded"
+                                style="border: 1px solid rgba(255, 255, 255, 0.05); box-shadow: 0 4px 6px rgba(0,0,0,0.1);"
+                            >
+                                <span
+                                    class="badge bg-danger me-3 p-2 font-monospace"
+                                    style="font-size: 14px;">Code 0</span
+                                >
+                                <span
+                                    class="text-light"
+                                    style="font-size: 16px;">Die (Failed)</span
+                                >
+                            </div>
+                            <div
+                                class="d-flex align-items-center bg-dark p-3 rounded"
+                                style="border: 1px solid rgba(255, 255, 255, 0.05); box-shadow: 0 4px 6px rgba(0,0,0,0.1);"
+                            >
+                                <span
+                                    class="badge bg-warning text-dark me-3 p-2 font-monospace"
+                                    style="font-size: 14px;">Code 2</span
+                                >
+                                <span
+                                    class="text-light"
+                                    style="font-size: 16px;">Unknown</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7 mt_md--40 mt_sm--40 text-left">
+                <div
+                    class="p-4 h-100"
+                    style="background: linear-gradient(145deg, #1e2024, #23272b); border-radius: 12px; box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;"
+                >
+                    <div
+                        class="d-flex align-items-center mb-4 pb-3"
+                        style="border-bottom: 1px solid rgba(255,255,255,0.05);"
+                    >
+                        <span
+                            class="badge bg-primary text-uppercase me-3 px-3 py-2 font-monospace"
+                            style="font-size: 15px;">POST</span
+                        >
+                        <h4
+                            class="title m-0 font-monospace text-light"
+                            style="font-size: 18px;"
+                        >
+                            https://api.chkr.cc/
+                        </h4>
+                    </div>
+
+                    <!-- Request Terminal -->
+                    <div
+                        class="terminal-window rounded overflow-hidden mb-4 shadow-lg"
+                        style="background: #0d1117; border: 1px solid rgba(255,255,255,0.1);"
+                    >
+                        <div
+                            class="terminal-header px-3 py-2 d-flex align-items-center"
+                            style="background: #161b22; border-bottom: 1px solid rgba(255,255,255,0.05);"
+                        >
+                            <div class="terminal-buttons d-flex gap-2">
+                                <span
+                                    class="rounded-circle"
+                                    style="width: 12px; height: 12px; background: #ff5f56;"
+                                ></span>
+                                <span
+                                    class="rounded-circle"
+                                    style="width: 12px; height: 12px; background: #ffbd2e;"
+                                ></span>
+                                <span
+                                    class="rounded-circle"
+                                    style="width: 12px; height: 12px; background: #27c93f;"
+                                ></span>
+                            </div>
+                            <div
+                                class="terminal-title w-100 text-center text-light opacity-75 font-monospace"
+                                style="font-size: 13px;"
+                            >
+                                Request.json
+                            </div>
+                        </div>
+                        <div
+                            class="terminal-body p-3 font-monospace custom-shiki"
+                            style="font-size: 15px; overflow-x: auto; margin:0;"
+                        >
+                            <Code
+                                code={requestBody}
+                                lang="json"
+                                theme="github-dark"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- Response Terminal -->
+                    <div
+                        class="terminal-window rounded overflow-hidden shadow-lg"
+                        style="background: #0d1117; border: 1px solid rgba(255,255,255,0.1);"
+                    >
+                        <div
+                            class="terminal-header px-3 py-2 d-flex align-items-center"
+                            style="background: #161b22; border-bottom: 1px solid rgba(255,255,255,0.05);"
+                        >
+                            <div class="terminal-buttons d-flex gap-2">
+                                <span
+                                    class="rounded-circle"
+                                    style="width: 12px; height: 12px; background: #ff5f56;"
+                                ></span>
+                                <span
+                                    class="rounded-circle"
+                                    style="width: 12px; height: 12px; background: #ffbd2e;"
+                                ></span>
+                                <span
+                                    class="rounded-circle"
+                                    style="width: 12px; height: 12px; background: #27c93f;"
+                                ></span>
+                            </div>
+                            <div
+                                class="terminal-title w-100 text-center text-light opacity-75 font-monospace"
+                                style="font-size: 13px;"
+                            >
+                                Response.json
+                            </div>
+                        </div>
+                        <div
+                            class="terminal-body p-3 font-monospace custom-shiki"
+                            style="font-size: 15px; overflow-x: auto; max-height: 400px; overflow-y: auto; margin:0;"
+                        >
+                            <Code
+                                code={responseBody}
+                                lang="json"
+                                theme="github-dark"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style is:global>
+        /* Ensure Astro Shiki code blocks don't add extra margins */
+        .custom-shiki pre {
+            margin: 0 !important;
+            background: transparent !important; /* Let the container handle background */
+            padding: 0.5rem;
+        }
+        .custom-shiki code {
+            font-family: inherit;
+        }
+        /* Hide scrollbar for cleaner look if desired, or style it */
+        .custom-shiki::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        .custom-shiki::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.02);
+        }
+        .custom-shiki::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        .custom-shiki::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</div>

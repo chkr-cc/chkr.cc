@@ -1,0 +1,83 @@
+---
+// src/layouts/BaseLayout.astro
+export interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta
+      name="keywords"
+      content="credit card checker, card validator, bulk checker, credit card validation, bin checker, free card checker"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://chkr.cc/" />
+    <meta property="og:image" content="/assets/images/logo/logo-chkr.png" />
+    <link rel="canonical" href="https://chkr.cc/" />
+
+    <!-- PWA Manifest & Icons (Placeholder for Future Phase) -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#212428" />
+    <link rel="apple-touch-icon" href="/assets/images/logo/logo-circle.png" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+    <!-- CSS (self-hosted + async to improve first paint) -->
+    <link rel="preload" href="/assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="preload" href="/assets/css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="/assets/css/style.min.css" />
+    </noscript>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "chkr.cc - Credit Card Checker",
+        "description": "Free online credit card bulk checker and validator",
+        "url": "https://chkr.cc",
+        "applicationCategory": "Utility",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+
+    <!-- Matomo Tag Manager Placeholder -->
+    <!-- INSERT YOUR MATOMO TAG MANAGER CODE HERE -->
+
+    <!-- End Matomo Tag Manager -->
+  </head>
+
+  <body
+    class="template-color-1 spybody"
+    data-bs-spy="scroll"
+    data-bs-target=".navbar-example2"
+    data-bs-root-margin="0px 0px -40%"
+  >
+    <slot />
+
+
+  </body>
+</html>
