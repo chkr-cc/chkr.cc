@@ -25,3 +25,4 @@ pnpm-debug.log*
 
 # local tmp files
 *_lh*.json
+chkr_cc_old/

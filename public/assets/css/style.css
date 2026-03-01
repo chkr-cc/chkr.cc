@@ -9156,6 +9156,32 @@ button.close {
   border-radius: 4px;
 }
 
-.custom-shiki::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.2);
+/* Legacy Badge Restoration for Counters */
+.nav-style .badge.bg-dark {
+  background-color: #343a40 !important;
+  color: inherit !important;
+  font-weight: var(--p-semi-bold);
+  padding: 0.25em 0.5em;
+  font-size: 0.85em;
+}
+
+/* Legacy Tab Color Behavior */
+.nav-style {
+  color: var(--color-heading);
+}
+
+.nav-style.active {
+  color: var(--color-primary);
+}
+
+#die-tab.active,
+#die-tab:hover,
+#die-tab:focus {
+  color: var(--color-stop);
+}
+
+#unknown-tab.active,
+#unknown-tab:hover,
+#unknown-tab:focus {
+  color: var(--color-unknown);
 }
